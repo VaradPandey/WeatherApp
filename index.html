@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="headerdiv">
+        WEATHER APP
+    </div>
+    <div class="page">
+        <div class="leftside">
+            <div class="maindiv">
+                <div class="entrydiv">
+                    <div class="lat">
+                        <label class="mainp" for="latinput">Latitude:</label>
+                        <input id="latinput" class="maininput js-latinput" type="text" placeholder="Enter Here">
+                    </div>
+                    <div class="long">
+                        <label class="mainp" for="longinput">Longitude:</label>
+                        <input id="longinput" class="maininput js-longinput" type="text" placeholder="Enter Here">
+                    </div>
+                </div>
+                <div class="buttondiv">
+                    <button class="mainbutton">Submit</button>
+                    <button class="livebutton">Live Location</button>
+                </div>
+            </div>
+            <div class="seconddiv">
+                <div class="controldiv">
+                    <div class="modetitle">Temperature °C:</div>
+                    <p class="dateshow"></p>
+                    <select class="dropdown" name="mode" id="mode">
+                        <option class="dropoption" value="Temperature">Temperature</option>
+                        <option class="dropoption" value="Humidity">Humidity</option>
+                    </select>
+                </div>
+                <div class="apidata"></div>
+                <canvas id="myChart" style="width: 100%; max-width: 850px;"></canvas>
+            </div>
+            <div class="daysdiv">
+            </div>
+        </div>
+        <div class="rightside">
+            <div class="mapsection" id="map">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="index.js"></script>
+    <script src="live/livelocation.js"></script>
+</body>
+</html>

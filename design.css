@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(15, 15, 15);
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+}
+
+.headerdiv{
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(41, 41, 41, 0.575);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.leftside{
+    max-width: 57%;
+    background-color: rgb(53, 53, 53);
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.maindiv{
+    text-align: center;
+}
+
+.lat, .long{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.lat label, .long label{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}
+
+.maininput{
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 520px;
+    margin: 5px;
+    background-color: rgb(35, 35, 35);
+    color: white;
+}
+
+.buttondiv{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mainbutton, .livebutton{
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+}
+
+.mainbutton{
+    background-color: rgb(135, 4, 4);
+}
+
+.livebutton{
+    background-color: rgb(112, 1, 131);
+}
+
+.seconddiv{
+    text-align: center;
+    margin-top: 12px;
+}
+
+.controldiv{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.modetitle{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.dropdown{
+    font-size: 17px;
+    padding: 8px;
+    border-radius: 5px;
+    width: 250px;
+    background-color: rgb(249, 249, 249);
+    border: 1px solid rgb(204, 204, 204);
+}
+
+canvas{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dateshow{
+    margin-top: -7px;
+    font-size: 26px;
+}
+
+.daysdiv{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-radius: 10%;
+}
+
+.day{
+    background-color: rgb(241, 238, 165);
+    color: rgb(0, 0, 0);
+    max-width: 100%;
+    height: 55px;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.rightside{
+    flex: 1;
+    max-width: 60%;
+    background-color: rgb(53, 53, 53);
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.mapsection{
+    width: 100%;
+    height: 725px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+@media(max-width: 768px){
+    .page{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftside, .rightside{
+        max-width: 100%;
+    }
+
+    .mapsection{
+        height: 300px;
+        width: 700px;
+    }
+    .dropdown{
+        width: 100%;
+    }
+}
+
